@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "602564401198",
+    "firebase_url": "https://flutter-quiz-c2315-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "flutter-quiz-c2315",
+    "storage_bucket": "flutter-quiz-c2315.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602564401198:android:31e10aba90ecbf78a4e7bf",
+        "android_client_info": {
+          "package_name": "com.ninezero.quiz"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgb8NaPG49VBApkv2O_mR_n55s_Vj-iX8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

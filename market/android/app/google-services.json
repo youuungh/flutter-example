@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1027695076891",
+    "project_id": "testmarket-49d2b",
+    "storage_bucket": "testmarket-49d2b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1027695076891:android:a3f5c45011acd97bbfbabe",
+        "android_client_info": {
+          "package_name": "com.ninezero.market"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1027695076891-a2foi8hukjlse5n6nqtc4e26dlh3giki.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAIIzlX3IaYbGEEtwsNkFN2mgYRdBl2Gs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1027695076891-a2foi8hukjlse5n6nqtc4e26dlh3giki.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

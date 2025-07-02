@@ -1,0 +1,74 @@
+import java.util.Properties
+
+plugins {
+    id("com.android.application")
+    // START: FlutterFire Configuration
+    id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
+    // END: FlutterFire Configuration
+    id("kotlin-android")
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id("dev.flutter.flutter-gradle-plugin")
+}
+
+val localProperties = Properties()
+val localPropertiesFile = rootProject.file("local.properties")
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.inputStream().use { localProperties.load(it) }
+}
+
+val kakaoKey = localProperties.getProperty("KAKAO_NATIVE_APP_KEY") ?: "default_key"
+
+android {
+    namespace = "com.ninezero.store_app"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = "27.0.12077973" //flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11.toString()
+    }
+
+    defaultConfig {
+        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        applicationId = "com.ninezero.store_app"
+        // You can update the following values to match your application needs.
+        // For more information, see: https://flutter.dev/to/review-gradle-config.
+        minSdk = 23 //flutter.minSdkVersion
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            // TODO: Add your own signing config for the release build.
+            // Signing with the debug keys for now, so `flutter run --release` works.
+            signingConfig = signingConfigs.getByName("debug")
+        }
+    }
+
+    flavorDimensions += "app"
+
+    productFlavors {
+        create("dev") {
+            applicationIdSuffix = ".dev"
+            dimension = "app"
+            resValue("string", "app_name", "Store App Dev")
+            manifestPlaceholders["kakaoScheme"] = "kakao$kakaoKey"
+        }
+        create("prod") {
+            dimension = "app"
+            resValue("string", "app_name", "Store App")
+            manifestPlaceholders["kakaoScheme"] = "kakao$kakaoKey"
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
