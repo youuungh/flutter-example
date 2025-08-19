@@ -1,0 +1,8 @@
+builders:
+  property_multiply:
+    import: "package:code_gen_core/code_gen_core.dart"
+    builder_factories: ["multiplyBuilder"]
+    build_extensions: {".dart": [".multiply.g.part"]}
+    auto_apply: dependents
+    build_to: cache
+    applies_builders: ["source_gen:combining_builder"]

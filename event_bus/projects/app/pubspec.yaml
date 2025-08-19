@@ -1,0 +1,24 @@
+name: event_bus_example
+description: A new Flutter projects.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  add:
+    path: ../../packages/add
+
+  setting:
+    path: ../../packages/setting
+
+  flutter_modular: ^6.4.1
+  event_bus: ^2.0.1
+
+flutter:
+  uses-material-design: true

@@ -1,0 +1,29 @@
+name: server_communication_examples
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  http: ^1.5.0
+  dio: ^5.9.0
+  retrofit: ^4.7.1
+  json_annotation: ^4.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+  build_runner: ^2.6.0
+  retrofit_generator: ^10.0.2
+  json_serializable: ^6.10.0
+
+flutter:
+  uses-material-design: true

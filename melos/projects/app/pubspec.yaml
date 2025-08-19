@@ -1,0 +1,20 @@
+name: melos
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  add:
+    path: ../../packages/add
+  setting:
+    path: ../../packages/setting
+
+flutter:
+  uses-material-design: true

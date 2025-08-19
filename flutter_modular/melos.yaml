@@ -1,0 +1,21 @@
+name: flutter_modular_app
+
+packages:
+  - projects/**
+  - packages/**
+
+scripts:
+  # usage : melos run setup
+  setup:
+    run:
+      melos exec -- rm -rf pubspec.lock && 
+      melos run update_packages && 
+      melos run pub_get
+
+  # usage : melos run update_packages
+  update_packages:
+    run: melos exec -- flutter update-packages --force-upgrade
+
+  # usage : melos run pub_get
+  pub_get:
+    run: melos exec -c 1 -- flutter pub get

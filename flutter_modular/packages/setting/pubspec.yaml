@@ -1,0 +1,17 @@
+name: setting
+description: "setting package project."
+version: 0.0.1
+publish_to: 'none'
+
+environment:
+  sdk: ^3.8.0
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  add:
+    path: ../add
+
+  flutter_modular: ^6.4.1
